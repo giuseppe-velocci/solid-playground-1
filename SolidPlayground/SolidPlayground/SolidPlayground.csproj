@@ -30,16 +30,17 @@
 
 	<ItemGroup>
 		<Using Remove="System.Net.Http" />
-		<Using Include="Core.DTO"/>
-		<Using Include="Infrastructure.Helper"/>
-		<Using Include="Infrastructure.Logging"/>
-		<Using Include="Infrastructure.Storage"/>
-		<Using Include="Infrastructure.Storage.Entities"/>
-		<Using Include="MessagesFramework"/>
-		<Using Include="Microsoft.Extensions.Logging"/>
+		<Using Include="Core.DTO" />
+		<Using Include="Infrastructure.Helper" />
+		<Using Include="Infrastructure.Logging" />
+		<Using Include="Infrastructure.Storage" />
+		<Using Include="Infrastructure.Storage.Entities" />
+		<Using Include="MessagesFramework" />
+		<Using Include="Microsoft.Extensions.Logging" />
 	</ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Storage\" />
     <Folder Include="Storage\" />
     <Folder Include="Processing\" />
   </ItemGroup>

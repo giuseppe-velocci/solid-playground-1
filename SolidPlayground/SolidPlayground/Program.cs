@@ -4,11 +4,11 @@ logger.LogInformation("Starting message processor");
 
 #region Digital factory Platform overview
 //                                   ________________________
+//                                  |                        |
 //      (((((((((((((((((((() --->  |                        |
-//     Booking messages queue       |                        |
-//                                  |       validation       |
-//                                  |       enrichment       | ---> (((((((((((((((((((((((((()
-//                                  |     transformation     |          Equipment messages 
+//     Booking messages queue       |       Validation       |
+//                                  |       Enrichment       | ---> (((((((((((((((((((((((((()
+//                                  |     Transformation     |          Equipment messages 
 //      (((((((((((((((((((() --->  |                        |        in DCSA standard format
 //    Equipment messages queue      |________________________|
 //                                        Digital Factory
@@ -19,9 +19,9 @@ logger.LogInformation("Starting message processor");
 //
 // 1. create a Subscriber for Booking queue
 //                                   ________________
-//      (((((((((((((((((((() --->  |                |
-//     Booking messages queue       | handle Booking |
-//                                  |________________|
+//                                  |                |
+//      (((((((((((((((((((() --->  | Handle Booking |
+//     Booking messages queue       |________________|
 //                                  Messages Processor
 //
 #endregion
@@ -31,10 +31,10 @@ logger.LogInformation("Starting message processor");
 //
 // 2. create a Subscriber for EquipmentActivites queue
 //                                   __________________
-//      (((((((((((((((((((() --->  |                  |
-//     Equipment messages queue     | handle Equipment |
-//                                  |__________________|
-//                                   Messages Processor
+//                                  |                  |
+//      (((((((((((((((((((() --->  | Handle Equipment |  ---> (((((((((((((((((((((((((()
+//     Equipment messages queue     |__________________|            Equipment messages 
+//                                   Messages Processor          in DCSA standard format
 //
 #endregion
 
