@@ -28,4 +28,9 @@
     <ProjectReference Include="..\MessagesFramework\MessagesFramework.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Storage\" />
+    <Folder Include="Processing\" />
+  </ItemGroup>
+
 </Project>
