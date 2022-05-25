@@ -29,6 +29,7 @@
   </ItemGroup>
 
 	<ItemGroup>
+		<Using Remove="System.Net.Http" />
 		<Using Include="Core.DTO"/>
 		<Using Include="Infrastructure.Helper"/>
 		<Using Include="Infrastructure.Logging"/>
