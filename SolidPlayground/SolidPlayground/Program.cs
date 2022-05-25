@@ -18,11 +18,11 @@ logger.LogInformation("Starting message processor");
 #region Create Booking Subscriber
 //
 // 1. create a Subscriber for Booking queue
-//                                   ________________
-//                                  |                |
-//      (((((((((((((((((((() --->  | Handle Booking |
-//     Booking messages queue       |________________|
-//                                  Messages Processor
+//                                   ________________          ____
+//                                  |                |  --->  \____/
+//      (((((((((((((((((((() --->  | Handle Booking |        |    |
+//      Booking messages queue      |________________|  <---  \____/
+//                                  Messages Processor       Database
 //
 #endregion
 
@@ -30,10 +30,17 @@ logger.LogInformation("Starting message processor");
 #region Create EquipmentActivities Subscriber
 //
 // 2. create a Subscriber for EquipmentActivites queue
+//                                          ____
+//                                         \____/
+//                                         |    |
+//                                         \____/    
+//                                        Database
+//                                          ^  |
+//                                          |  v
 //                                   __________________
 //                                  |                  |
 //      (((((((((((((((((((() --->  | Handle Equipment |  ---> (((((((((((((((((((((((((()
-//     Equipment messages queue     |__________________|            Equipment messages 
+//    Equipment messages queue      |__________________|            Equipment messages 
 //                                   Messages Processor          in DCSA standard format
 //
 #endregion
